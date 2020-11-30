@@ -128,12 +128,13 @@ const inMarvelComicsSumWeight = superheroes.filter((object) =>
     ;
 ;
 
-const heaviestHero = superheroes.filter((object) => 
+const heaviestHero = superheroes.filter((object) =>
     (object.weight !== "unknown")).reduce((highestWeight, object) => {
-    if (parseInt(object.weight) > highestWeight) {
-        highestWeight = parseInt(object.weight);
-    }
-    return highestWeight;}, 0)
+        if (parseInt(object.weight) > highestWeight) {
+            highestWeight = parseInt(object.weight);
+        };
+        return highestWeight;
+    }, 0);
 
 
 
